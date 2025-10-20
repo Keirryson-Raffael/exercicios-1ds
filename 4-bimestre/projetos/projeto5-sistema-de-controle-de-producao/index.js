@@ -5,28 +5,32 @@ const prompt = require("prompt-sync")()
 
 let dias = 1
 let continuar
+let totalGeral = 0
+let resumo = ""
 
 do {
-    let num = parseInt(prompt(`Quantas peças devem ser produzidas?: `))
+    let num = parseInt(prompt("Quantas peças devem ser produzidas? "))
+    let pecas = 0
 
     while (pecas < num) {
         pecas++
-        console.log(`Peça ${pecas} produzida.`)
+        console.log(`Peça ${pecas} produzida com sucesso.`)
     }
+
+    totalGeral += pecas
+
     if (pecas == num) {
-        console.log(`${pecas} peças produzidas`)
         console.log(`Meta alcançada!`)
     } else {
         console.log(`Meta não alcançada.`)
     }
 
-    console.log(`resumo dos dias anteriores:`)
-    for (let i = 1; i < dias; i++) {
-        console.log(`Dia ${i}: ${pecas} peças produzidas`);
-    }
-    continuar = prompt(`Deseja simular outro turno? (S/N)`)
-
-    dias++
+    console.log(`Total Geral:${totalGeral}`)
+    resumo += ` Resumo dos dias anteriores:
+    Dia ${dias}: ${pecas} peças produzida(S) com sucesso \n`
+    dias ++
+    continuar = prompt(`Deseja simular outro turno? (S/N)`).toUpperCase()
 } while (continuar == "S")
-
-    console.log(`Encerrando o sistema de produção`)
+    console.log(resumo)
+    console.log(`Total geral:${totalGeral}`)
+    console.log("Encerrando sistema de produção...")
