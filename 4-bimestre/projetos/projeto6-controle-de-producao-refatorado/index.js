@@ -16,7 +16,6 @@ for (let i = 0; i < producao.length; i++){
     total += producao[i]
 }
 
-
 let media = total / producao.length
 
 let maior = producao[0]
