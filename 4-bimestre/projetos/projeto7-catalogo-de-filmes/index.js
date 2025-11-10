@@ -1,16 +1,16 @@
 // CRIE UMA LÓGICA ABAIXO
 let prompt = require("prompt-sync")()
 
-let filme1 = {}
-let filme2 = {}
-let filme3 = {}
-let filme4 = {}
-let filme5 = {}
-let filme6 = {}
-let filme7 = {}
-let filme8 = {}
-let filme9 = {}
-let filme10 = {}
+let filme1 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
+let filme2 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 7}
+let filme3 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
+let filme4 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 6}
+let filme5 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
+let filme6 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 10}
+let filme7 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
+let filme8 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 9}
+let filme9 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
+let filme10 = {titulo: "alguma coisa", genero: "alguma coisa", ano: 3000, avaliacao: 8}
 
 let titulo = ""
 let genero = ""
@@ -19,12 +19,12 @@ let avaliacao = 0
 
 let filmes = [filme1, filme2, filme3, filme4, filme5, filme6, filme7, filme8, filme9, filme10]
 
-for (let i = 0; i < filmes.length; i++) {
+/*for (let i = 0; i < filmes.length; i++) {
   let titulo = prompt("Digite o título do filme: ")
   let genero = prompt("Digite o gênero do filme: ")
   let ano = parseInt(prompt("Digite o ano em que o filme foi lançado: "))
   let avaliacao = parseFloat(prompt("Digite a avaliação do filme: "))
-}
+}*/
 
   while (avaliacao > 10 || avaliacao < 0) {
     console.log("A avaliação não pode ser maior que 10, coloque a avaliação novamente")
